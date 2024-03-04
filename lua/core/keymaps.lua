@@ -12,3 +12,6 @@ keymap.set("n", "<leader>sv", "<C-w>v")
 
 -- nvim-tree
 keymap.set("n", "<leader>e", ":NvimTreeToggle<CR>")
+
+-- bufferline
+keymap.set('n', '<C-Tab>', ":bnext<CR>")
