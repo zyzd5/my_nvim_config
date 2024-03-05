@@ -8,6 +8,7 @@ keymap.set("i", "<CapsLock>", "<ESC>")
 -- 窗口
 keymap.set("n", "<leader>sv", "<C-w>v")         -- 主键 + sv: 垂直分割窗口
 keymap.set("n", "<C-Down>", "<C-e>")            -- Ctrl + down 向下滚动视图
+keymap.set("n", "<C-UP>", "<C-y>")              -- Ctrl + up 向下滚动视图
 
 -- editor
 
