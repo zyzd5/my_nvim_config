@@ -16,10 +16,25 @@ return
         local capabilities = cmp_nvim_lsp.default_capabilities()
         
         lspconfig["clangd"].setup({})       --c/c++
-        -- lspconfig["taplo"].setup({})        --toml
-        -- lspconfig["lua_ls"].setup({})       --lua
-        -- lspconfig["jdtls"].setup({})        --java
-    
+        lspconfig["taplo"].setup({})        --toml
+        lspconfig["lua_ls"].setup({         --lua
+            capabilities = capabilities,
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = {"vim"},
+                },
+                workspace = {
+                    library = {
+                        [vim.fn.expand("$VIMRUNTIME/lua")] = true,
+                        [vim.fn.stdpath("config") .. "/lua"] = true,
+                    },
+                },
+            },
+        },
+    })       
+        lspconfig["jdtls"].setup({})        --java
+        lspconfig["pylsp"].setup({})        --python
     end,
 
 }
