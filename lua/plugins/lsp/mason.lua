@@ -17,8 +17,24 @@ return
         })
 
         mason_lspconfig.setup({
-            ensure_installed = {},
-            automatic_installation = true,
-        })
+            ensure_installed = {
+                "clangd",                       -- c/c++
+                -- "cmake",                        -- cmake
+                -- "dockerls",                     -- docker
+                -- "html",                         -- html
+                -- "graphql",                      -- graphql
+                -- "jsonls",                       -- json
+                -- "jdtls",                        -- java
+                -- "ltex",                         -- latex
+                -- "lua_ls",                       -- lua
+                -- "prosemd_lsp",                  -- markdown
+                -- "pyright",                      -- python
+                -- "rust_analyzer",                -- rust
+                -- "tsserver",                     -- java script
+                -- "taplo",                        -- toml
+                -- "yamlls",                       -- yaml
+                -- "lemminx"                       -- xml
+            },
+            automatic_installation = true,})
     end,
 }
